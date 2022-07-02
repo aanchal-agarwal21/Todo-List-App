@@ -1,5 +1,6 @@
 import "./App.css";
 import Header from "./Components /Header/Header";
+import Form from "./Components /Form/Form";
 
 function App() {
 	return (
@@ -8,6 +9,9 @@ function App() {
 				<div className="header">
 					<Header />
 				</div>
+        <div className="form">
+          <Form />
+        </div>
 			</div>
 		</div>
 	);

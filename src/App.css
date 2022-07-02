@@ -2,7 +2,7 @@
 .todo
 {
   background-color: #950740;
-  width:40%;
+  width:35%;
   height: 70vh;
   position: absolute;
   float: left;
@@ -15,4 +15,10 @@
 .header
 {
   margin-top: 20px;
+}
+
+.form
+{
+  text-align: center;
+  margin-top: 35px;
 }
