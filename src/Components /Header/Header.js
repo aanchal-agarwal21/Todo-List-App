@@ -1,9 +1,7 @@
-import React from 'react'
-import "./Header.css"
+import React from "react";
+import "./Header.css";
 const Header = () => {
-  return (
-    <div className='header'>Todo-List</div>
-  )
-}
+	return <div className="header">Todo-List</div>;
+};
 
 export default Header;
