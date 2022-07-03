@@ -1,5 +1,8 @@
 import React from "react";
 import "./TodoList.css";
+import CheckIcon from "@mui/icons-material/Check";
+import EditIcon from "@mui/icons-material/Edit";
+import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 
 const TodoList = ({ todos, setTodos }) => {
 	return (
@@ -13,6 +16,15 @@ const TodoList = ({ todos, setTodos }) => {
 						className="todo-item"
 						onChange={(event) => event.preventDefault()}
 					/>
+					<button className="button check">
+						<CheckIcon />
+					</button>
+					<button className="button edit">
+						<EditIcon />
+					</button>
+					<button className="button delete">
+						<DeleteForeverIcon />
+					</button>
 				</li>
 			))}
 		</div>
