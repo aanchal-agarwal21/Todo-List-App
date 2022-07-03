@@ -5,11 +5,14 @@ import EditIcon from "@mui/icons-material/Edit";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 
 const TodoList = ({ todos, setTodos }) => {
+	const deleteHandler = ({ title }) => {
+		setTodos(todos.filter((todo) => todo.title !== title));
+	};
+
 	return (
 		<div className="todo-list">
 			{todos.map((todo) => (
 				<li className="todo-items">
-					{/* {todo.title} */}
 					<input
 						type="text"
 						value={todo.title}
@@ -22,7 +25,7 @@ const TodoList = ({ todos, setTodos }) => {
 					<button className="button edit">
 						<EditIcon />
 					</button>
-					<button className="button delete">
+					<button className="button delete" onClick={()=>deleteHandler(todo)}>
 						<DeleteForeverIcon />
 					</button>
 				</li>
