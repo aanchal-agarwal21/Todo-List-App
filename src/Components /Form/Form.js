@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Form.css";
-//import {v4 as uuidv4} from uuid;
+import {v4 as uuidv4} from "uuid";
 const form = ({input,setInput,todos, setTodos}) => {
     const onInputChange =(event)=>{
         setInput(event.target.value);
@@ -8,7 +8,8 @@ const form = ({input,setInput,todos, setTodos}) => {
 
     const onFormSubmit =(event)=>{
         event.preventDefault();
-        setTodos([ ...todos , {title :input , completed :false}]);
+        setTodos([ ...todos , {id:uuidv4() ,title :input , completed :false}]);
+		console.log("todos",todos);
         setInput("");
     }
 	return (

@@ -5,8 +5,8 @@ import EditIcon from "@mui/icons-material/Edit";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 
 const TodoList = ({ todos, setTodos }) => {
-	const deleteHandler = ({ title }) => {
-		setTodos(todos.filter((todo) => todo.title !== title));
+	const handleDelete = ({ id }) => {
+		setTodos(todos.filter((todo) => todo.id !== id));
 	};
 
 	return (
@@ -25,7 +25,7 @@ const TodoList = ({ todos, setTodos }) => {
 					<button className="button edit">
 						<EditIcon />
 					</button>
-					<button className="button delete" onClick={()=>deleteHandler(todo)}>
+					<button className="button delete" onClick={()=>handleDelete(todo)}>
 						<DeleteForeverIcon />
 					</button>
 				</li>
