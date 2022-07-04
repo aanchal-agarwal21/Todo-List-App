@@ -5,6 +5,19 @@ import EditIcon from "@mui/icons-material/Edit";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 
 const TodoList = ({ todos, setTodos }) => {
+
+    const handleComplete =(todo)=>{
+        setTodos(
+            todos.map((item) =>{
+                if(item.id === todo.id)
+                {
+                    return{...item , completed:!item.completed};
+                }
+                return item;
+            })
+        )
+    };
+
 	const handleDelete = ({ id }) => {
 		setTodos(todos.filter((todo) => todo.id !== id));
 	};
@@ -19,7 +32,7 @@ const TodoList = ({ todos, setTodos }) => {
 						className="todo-item"
 						onChange={(event) => event.preventDefault()}
 					/>
-					<button className="button check">
+					<button className="button check" onClick={()=>handleComplete(todo)}>
 						<CheckIcon />
 					</button>
 					<button className="button edit">
