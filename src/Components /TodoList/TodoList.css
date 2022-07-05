@@ -11,12 +11,13 @@
 }
 
 .todo-item {
-	height: 30px;
+	height: 35px;
 	font-size: 25px;
-	width: 70%;
+	width: 65%;
 	padding: 5px;
 	background: transparent;
 	border: none;
+	padding-left:15px;
 }
 
 .button {
@@ -25,4 +26,10 @@
 
 .completed {
 	text-decoration: line-through;
+}
+
+@media screen and (max-width: 515px) {
+	.todo-item {
+		width:60%;
+	}
 }

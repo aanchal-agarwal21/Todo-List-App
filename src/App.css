@@ -9,6 +9,17 @@
 	transform: translate(-50%, -50%);
 	border-radius: 20px;
 }
+@media screen and (max-width: 1480px) {
+	.todo{
+		width: 515px;
+	}
+}
+
+@media screen and (max-width: 515px) {
+	.todo{
+		width: 450px;
+	}
+}
 
 .header {
 	margin-top: 20px;
